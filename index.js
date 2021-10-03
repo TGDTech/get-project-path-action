@@ -1,20 +1,15 @@
 const core = require('@actions/core');
+const getProjectPath = require('./utils/getProjectPath');
 
 function run() {
   try {
-    const inputKeys = core.getInput('keys');
-    const json = core.getInput('json');
+    const author = core.getInput('author');
+    const project = core.getInput('project');
+    const stageNumber = core.getInput('stageNumber');
 
-    let value = JSON.parse(json);
-    const array = inputKeys.split(',').map(item => item.trim());
+    const value = getProjectPath(author, project, stageNumber);
 
-    for (const item of array) {
-      if (value[item]) {
-        value = value[item]
-      }
-    }
-    //
-    core.setOutput('value', JSON.stringify(value));
+    core.setOutput('value', value);
   } catch (err) {
     core.setFailed(err.message);
   }

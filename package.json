@@ -1,5 +1,5 @@
 {
-  "name": "from-json-action",
+  "name": "get-project-path-action",
   "version": "1.0.0",
   "description": "JavaScript Action Template",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/from-json-action.git"
+    "url": "git+https://github.com/actions/get-project-path-action.git"
   },
   "keywords": [
     "GitHub",
@@ -20,9 +20,9 @@
   "author": "Arthay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actions/from-json-action/issues"
+    "url": "https://github.com/actions/get-project-path-action/issues"
   },
-  "homepage": "https://github.com/actions/from-json-action#readme",
+  "homepage": "https://github.com/actions/get-project-path-action#readme",
   "dependencies": {
     "@actions/core": "^1.1.1"
   },

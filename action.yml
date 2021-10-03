@@ -2,14 +2,18 @@ name: split-by
 author: Rishabh Gupta
 description: Split the string by the given string
 inputs:
-  keys:
-    description: "keys of json"
+  author:
+    description: "github author"
     required: true
     default: ""
-  json:
-    description: "json"
+  project:
+    description: "Project"
     required: true
     default: ""
+  stageNumber:
+    description: "Number of stage"
+    required: false
+    default: "1"
 outputs:
   value:
     description: "value of json"
