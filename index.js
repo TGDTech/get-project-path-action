@@ -3,11 +3,10 @@ const getProjectPath = require('./utils/getProjectPath');
 
 function run() {
   try {
-    const author = core.getInput('author');
     const project = core.getInput('project');
     const stageNumber = core.getInput('stageNumber');
 
-    const value = getProjectPath(author, project, stageNumber);
+    const value = getProjectPath(project, stageNumber);
 
     core.setOutput('value', value);
   } catch (err) {

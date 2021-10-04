@@ -1,7 +1,7 @@
-const { sitPath, projects, authors } = require("./constants");
+const { sitPath, projects } = require("./constants");
 
-function getProjectPath(author, project, number) {
-  return `${sitPath}${authors[author]}-${number}${projects[project]}`;
+function getProjectPath(project, number) {
+  return `${sitPath}${number}${projects[project]}`;
 }
 
 module.exports = getProjectPath;

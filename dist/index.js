@@ -161,11 +161,10 @@ const getProjectPath = __webpack_require__(595);
 
 function run() {
   try {
-    const author = core.getInput('author');
     const project = core.getInput('project');
     const stageNumber = core.getInput('stageNumber');
 
-    const value = getProjectPath(author, project, stageNumber);
+    const value = getProjectPath(project, stageNumber);
 
     core.setOutput('value', value);
   } catch (err) {
@@ -534,11 +533,11 @@ module.exports = require("assert");
 /***/ 364:
 /***/ (function(module) {
 
-module.exports.sitPath = "/home/tech/sites/gamedaycasino-";
+module.exports.sitPath = "/home/tech/sites/gamedaycasino-staging";
 
 module.exports.projects = {
-  'thegameday-casino': ".sitedistrict.com/www/wp-content/themes/thegameday-casino",
-  'thirstyaffilates-pro': ".sitedistrict.com/www/wp-content/plugins/thirstyaffilates-pro"
+  "thegameday-casino": ".sitedistrict.com/www/wp-content/themes/thegameday-casino",
+  "thirstyaffilates-pro": ".sitedistrict.com/www/wp-content/plugins/thirstyaffilates-pro"
 };
 
 module.exports.authors = {
@@ -1531,10 +1530,10 @@ exports.HttpClient = HttpClient;
 /***/ 595:
 /***/ (function(module, __unusedexports, __webpack_require__) {
 
-const { sitPath, projects, authors } = __webpack_require__(364);
+const { sitPath, projects } = __webpack_require__(364);
 
-function getProjectPath(author, project, number) {
-  return `${sitPath}${authors[author]}-${number}${projects[project]}`;
+function getProjectPath(project, number) {
+  return `${sitPath}${number}${projects[project]}`;
 }
 
 module.exports = getProjectPath;

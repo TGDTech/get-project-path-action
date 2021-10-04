@@ -1,4 +1,4 @@
-module.exports.sitPath = "/home/tech/sites/gamedaycasino-";
+module.exports.sitPath = "/home/tech/sites/gamedaycasino-staging";
 
 module.exports.projects = {
   "thegameday-casino": ".sitedistrict.com/www/wp-content/themes/thegameday-casino",

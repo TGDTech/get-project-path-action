@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-test('splits string by the given charactr', () => {
+test('lorem ipsum', () => {
     expect(true).toBe(true);
 });
 
